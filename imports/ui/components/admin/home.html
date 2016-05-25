@@ -1,0 +1,41 @@
+<md-content>
+<div layout="row" layout-align="center" layout-padding>
+  <div flex="70">
+    <md-content flex layout-padding>
+      <h2>Admin Experience</h2>
+      <p>Please login at the top right.</p>
+      <p>Once you are in, your user account should show in the list below. From there you will be able to toggle if you want to be an admin or go back to being a normal user. When you select your account to be an admin you should see a new button appear that will allow you to view current chats by other users. If you would like to simulate this action you should open a different browser (ie if you are using Chrome open Firefox or Safari). Navigate to the user experience page and follow instructions to open a new chat.</p>
+    </md-content>
+
+  </div>
+  <div>
+    <md-button class="md-accent md-raised md-hue-1" ng-if="$ctrl.isAdmin" ui-sref="admin.engagements">Show Active Chats</md-button>
+  </div>
+</div>
+</md-content>
+
+<md-content style="background-color: #F0F8FF">
+  <md-table-container>
+    <table md-table md-row-select multiple md-progress="promise">
+      <thead md-head>
+        <tr md-row>
+          <th md-column>ID</th>
+          <th md-column md-order-by="nameToLower"><span>UserName</span></th>
+          <th md-column><span>Roles</span></th>
+          <th md-column md-numeric>Toggle Admin</th>
+        </tr>
+      </thead>
+      <tbody md-body>
+        <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="user in $ctrl.users">
+          <td md-cell>{{user._id}}</td>
+          <td md-cell>{{user.username}}</td>
+          <td md-cell>{{user.roles | json}}</td>
+          <td md-cell>
+            <md-button class="md-raised md-primary" ng-if="user.roles.length == 0" ng-click="$ctrl.makeAdmin(user._id)">Make Admin</md-button>
+            <md-button class="md-raised md-warn" ng-if="user.roles | contains:'admin'" ng-click="$ctrl.removeAdmin(user._id)">Remove Admin</md-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </md-table-container>
+</md-content>

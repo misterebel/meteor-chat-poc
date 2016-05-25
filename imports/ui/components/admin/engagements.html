@@ -1,0 +1,32 @@
+<md-content flex layout-padding>
+  <h2>Engagements List</h2>
+  <p>This is a list of the current chat sessions that are available. If you would like to simulate this action you should open a different browser (ie if you are using Chrome open Firefox or Safari). Navigate to the user experience page and follow instructions to open a new chat. Once the chat is open it will show in the list with actions to interact with it.</p>
+</md-content>
+
+<md-content style="background-color: #F0F8FF">
+  <md-table-container>
+    <table md-table md-row-select multiple md-progress="promise">
+      <thead md-head>
+        <tr md-row>
+          <th md-column>host</th>
+          <th md-column>user-agent</th>
+          <th md-column>chat session id</th>
+          <th md-column>createdAt</th>
+          <th md-column>Actions</th>
+        </tr>
+      </thead>
+      <tbody md-body>
+        <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="engagement in $ctrl.engagements">
+          <td md-cell>{{engagement.connection.host}}</td>
+          <td md-cell>{{engagement.connection['user-agent']}}</td>
+          <td md-cell>{{engagement.publicationId}}</td>
+          <td md-cell>{{engagement.createdAt}}</td>
+          <td md-cell>
+            <md-button class="md-accent md-raised md-hue-1" ng-click="$ctrl.openEngagement(engagement.publicationId)">open it</md-button>
+            <md-button class="md-raised md-primary" ng-click="$ctrl.addAdvertisement(engagement.publicationId)">Ad Advertisement</md-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </md-table-container>
+</md-content>

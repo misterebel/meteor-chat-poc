@@ -1,0 +1,16 @@
+<md-content>
+  <div layout="row" layout-align="center" layout-padding>
+    <div flex="70">
+      <md-content flex layout-padding>
+        <h2>User Experience</h2>
+        <p>Please login at the top right.</p>
+        <p>Once you are in, you should see a new button that will allow you to open a new Chat.</p>
+      </md-content>
+    </div>
+    <div>
+      <md-button class="md-accent md-raised md-hue-1" ng-show="$ctrl.currentUser" ng-click="$ctrl.openChat()">
+        Open Chat
+      </md-button>
+    </div>
+  </div>
+</md-content>

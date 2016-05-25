@@ -1,0 +1,53 @@
+<style type="text/css">
+.scroller {
+    white-space: pre-line;
+    height: 420px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+</style>
+<section class="module">
+
+  <header class="top-bar">
+
+    <div class="left">
+      <span class="icon typicons-message"></span>
+      <h1>Chat Box</h1>
+    </div>
+
+    <div class="right">
+      <span class="icon typicons-minus"></span>
+      <span class="icon typicons-times"></span>
+    </div>
+
+  </header>
+
+  <perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+
+  <ol class="discussion" style="min-height: 420px;">
+    <li ng-repeat="message in $ctrl.chat[0].messages" ng-class="$ctrl.isSelf(message.userId) ? 'self' : 'other'" >
+      <div ng-if="message.system" style="display: block">
+        <img ng-src="{{message.src}}" style="max-width:100%; max-height:100%;">
+      </div>
+      <div ng-if="!message.system" class="avatar">
+        <div ng-avatar initials="{{message.userId}}" ng-style="$ctrl.isSelf(message.userId) ? 'bg-green' : 'bg-yellow'" corner-radius="10"></div>
+      </div>
+      <div ng-if="!message.system" class="messages">
+        <p>{{message.text}}</p>
+        <time datetime="{{message.createdAt}}">{{message.userId}} • 51 min</time>
+      </div>
+    </li>
+  </ol>
+
+  </perfect-scrollbar>
+
+  <footer style="position: absolute;">
+    <div>
+      <form class="new-task" ng-submit="$ctrl.addMessage($ctrl.newMessage)" style="width:100%; background-color: grey;">
+      <input ng-model="$ctrl.newMessage" type="text" name="text" placeholder="Type to add new tasks"/>
+    </form>
+  </div>
+  </footer>
+
+</section>
