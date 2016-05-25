@@ -41,20 +41,11 @@ $ curl https://install.meteor.com/ | sh
 ```
 
 ```sh
-$ git clone [git-repo-url] chat-poc
-$ cd chat-poc
+$ git clone [git-repo-url] meteor-chat-poc
+$ cd meteor-chat-poc
 $ meteor npm i -d
 $ meteor
 ```
-
-### Plugins
-
-This is currently extended with the following plugins
-
-* Dropbox
-* Github
-* Google Drive
-* OneDrive
 
 ### Development
 
@@ -63,9 +54,7 @@ Want to contribute? Great!
 ### Todos
 
  - Write Tests
- - Rethink Github Save
  - Add Code Comments
- - Add Night Mode
 
 License
 ----
@@ -79,7 +68,7 @@ MIT
 
 
    [misterebel]: <https://github.com/misterebel>
-   [git-repo-url]: <https://github.com/misterebel/dillinger.git>
+   [git-repo-url]: <https://github.com/misterebel/meteor-chat-poc.git>
    [john gruber]: <http://daringfireball.net>
    [node.js]: <http://nodejs.org>
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
