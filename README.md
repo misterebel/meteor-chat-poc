@@ -1,6 +1,4 @@
-# Chat POC
-
-This POC is designed to test MeteorJS functionality within a chat application. Most code is written in ECMA6 format. A full list of the technologies used are below.
+# ChatDrive Public
 
   - MeteorJS 1.3.*
   - Angular 1.5.*
@@ -11,7 +9,7 @@ This POC is designed to test MeteorJS functionality within a chat application. M
   - Account-Roles
   - MongoDB
 
-The POC uses a number of open source projects to work properly:
+This uses a number of open source projects to work properly:
 
 * [AngularJS] - HTML enhanced for web apps!
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
@@ -23,9 +21,6 @@ The POC uses a number of open source projects to work properly:
 
 ### Version
 0.0.1
-
-And of course this poc itself is open source with a [public repository][misterebel]
- on GitHub.
 
 ### Installation
 
@@ -41,39 +36,21 @@ $ curl https://install.meteor.com/ | sh
 ```
 
 ```sh
-$ git clone [git-repo-url] meteor-chat-poc
-$ cd meteor-chat-poc
+$ git clone 
+$ cd chatdrive_public
 $ meteor npm i -d
 $ meteor
 ```
 
-### Development
-
-Want to contribute? Great!
 
 ### Todos
 
  - Write Tests
  - Add Code Comments
 
-License
-----
-
-MIT
-
-
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
 
    [misterebel]: <https://github.com/misterebel>
-   [git-repo-url]: <https://github.com/misterebel/meteor-chat-poc.git>
-   [john gruber]: <http://daringfireball.net>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [express]: <http://expressjs.com>
+
    [AngularJS]: <http://angularjs.org>
 
 

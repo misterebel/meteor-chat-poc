@@ -3,18 +3,16 @@ import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
 
-import todosList from '../imports/ui/components/todos/todos';
 import nav from '../imports/ui/components/nav/nav';
 import admin from '../imports/ui/components/admin/admin';
 import chat from '../imports/ui/components/chat/chat';
 import app from '../imports/ui/components/app/app';
 
-angular.module('simple-todos', [
+angular.module('chat-poc', [
   angularMeteor,
   uiRouter,
   ngMaterial,
 
-  todosList.name,
   app.name,
   admin.name,
   chat.name,
@@ -57,14 +55,10 @@ function config($stateProvider, $locationProvider, $urlRouterProvider, $mdIconPr
       url: '/developer',
       template: '<nav></nav><app-home></app-home>'
     })
-    .state('todos', {
-      url: '/todos',
-      template: '<todos></todos>'
-    })
 }
 
 function onReady() {
-  angular.bootstrap(document, ['simple-todos']);
+  angular.bootstrap(document, ['chat-poc']);
 }
 
 if (Meteor.isCordova) {
