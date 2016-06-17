@@ -45,7 +45,7 @@ class EngagementsCtrl {
       'http://content.linkoffers.net/SharedImages/Products/219967/606827.png'
     ];
 
-    let num = Math.floor((Math.random() * 10));
+    let num = Math.floor((Math.random() * 6));
     let message = {
       system: true,
       src: ads[num],

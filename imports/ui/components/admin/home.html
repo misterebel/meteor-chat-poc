@@ -31,7 +31,7 @@
           <td md-cell>{{user.username}}</td>
           <td md-cell>{{user.roles | json}}</td>
           <td md-cell>
-            <md-button class="md-raised md-primary" ng-if="user.roles.length == 0" ng-click="$ctrl.makeAdmin(user._id)">Make Admin</md-button>
+            <md-button class="md-raised md-primary" ng-if="!user.roles || user.roles.length == 0" ng-click="$ctrl.makeAdmin(user._id)">Make Admin</md-button>
             <md-button class="md-raised md-warn" ng-if="user.roles | contains:'admin'" ng-click="$ctrl.removeAdmin(user._id)">Remove Admin</md-button>
           </td>
         </tr>
